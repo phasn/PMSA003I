@@ -1,0 +1,32 @@
+{
+	"name": "pmsa003i",
+	"version": "1.0.0",
+	"description": "Port of Adafruit's CircuitPython I2C driver for PMSA003I air quality PM2.5 particulate matter sensors",
+	"main": "index.js",
+	"type": "module",
+	"repository":{
+		"type": "git",
+		"url": "git+https://git@github.com/phasn/PMSA003I.git"
+	},
+	"homepage": "https://github.com/phasn/PMSA003I",
+	"scripts":{
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies":{
+		"i2c-bus": "^5.2.3"
+	},
+	"author": "phasn <phasn@proton.me> (https://github.com/phasn)",
+	"license": "MIT",
+	"keywords":[
+		"PMSA003I",
+		"particulate matter",
+		"PM2.5",
+		"air quality",
+		"sensor",
+		"i2c",
+		"driver",
+		"raspberry pi",
+		"peripheral",
+		"Adafruit"
+	]
+}
