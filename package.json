@@ -1,5 +1,5 @@
 {
-	"name": "pmsa003i",
+	"name": "pmsa003i-adafruit",
 	"version": "1.0.0",
 	"description": "Port of Adafruit's CircuitPython I2C driver for PMSA003I air quality PM2.5 particulate matter sensors",
 	"main": "index.js",
