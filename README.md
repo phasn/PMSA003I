@@ -5,7 +5,7 @@
 
 JavaScript Port of [Adafruit's CircuitPython I2C driver](http://github.com/adafruit/Adafruit_CircuitPython_PM25) for [PMSA003I air quality PM2.5 particulate matter sensors](https://www.adafruit.com/product/4632).
 
-![PMSA003I Module](https://github.com/phasn/PMSA003I/blob/main/examples/module.jpg "PMSA003I Module")
+![PMSA003I Module](https://github.com/phasn/PMSA003I/blob/main/module.PMSA003I.jpg "PMSA003I Module")
 
 ## Contents
 
@@ -27,6 +27,8 @@ npm rebuild
 ```
 
 ## Usage
+
+A more detailed [example script](https://github.com/phasn/PMSA003I/tree/main/examples) is available in the [github repo](https://github.com/phasn/PMSA003I).
 
 ### General usage:
 
