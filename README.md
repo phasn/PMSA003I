@@ -1,7 +1,7 @@
 # PMSA003I
 
 > [!IMPORTANT]
-> From NPM v12 onward, NPM will require you to manually approve and then re-run any post-install build scripts when installing dependencies (see https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/). Steps for accomplishing this are included in [Installation](#installation).
+> From NPM v12 onward, NPM will require you to manually approve and then re-run any post-install build scripts when installing dependencies *(see https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/)*. Steps for accomplishing this are included in [Installation](#installation).
 
 JavaScript Port of [Adafruit's CircuitPython I2C driver](http://github.com/adafruit/Adafruit_CircuitPython_PM25) for [PMSA003I air quality PM2.5 particulate matter sensors](https://www.adafruit.com/product/4632).
 
@@ -28,8 +28,6 @@ npm rebuild
 
 ## Usage
 
-A more detailed [example script](https://github.com/phasn/PMSA003I/tree/main/examples) is available in the [github repo](https://github.com/phasn/PMSA003I).
-
 ### General usage:
 
 ```js
@@ -46,8 +44,8 @@ let data = sensor.readSensorData();
 
 #### Class PMSA003I({options})
 
-- bus - EITHER: An [i2c-bus synchronous Bus instance](https://www.npmjs.com/package/i2c-bus#opensyncbusnumber--options), OR: the number of the I2C bus to use.
-- address - The I2C address for the sensor. Defaults to 0x12.
+- bus - **EITHER:** An [i2c-bus synchronous Bus instance](https://www.npmjs.com/package/i2c-bus#opensyncbusnumber--options), **OR:** the number of the I2C bus to use.
+- address - The I2C address for the sensor. **Default:** 0x12.
 
 Represents a PMSA003I sensor module.
 
@@ -70,7 +68,7 @@ const address = 0x12;
 const sensor = new PMSA003I({ bus:synchBus, address });
 ```
 
-##### P9813.readSensorData()
+##### PMSA003I.readSensorData()
 
 Run sensor measurements and return an object containing the results.
 

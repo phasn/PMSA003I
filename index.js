@@ -8,7 +8,7 @@ import i2c		from 'i2c-bus';
 // import {Gpio}	from 'onoff';
 
 
-const sleep = ms => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms);
+const sleep = (ms=0) => {if(ms===0)return; Atomics.wait(new Int32Array(new SharedArrayBuffer(4)),0,0,ms)};
 
 // const setGpioOutputPin = (pin, name) => {
 // 	let PIN = Number.isInteger(pin) && pin>=0					? new Gpio(pin, 'out')
@@ -29,7 +29,7 @@ const setI2CBus = bus => {
 const sum = buf => {
 	let checksum = 0;
 	// Iterate through each character in the data
-	for (let i=0; i<buf.length; i++){
+	for(let i=0; i<buf.length; i++){
 		// Add the ASCII value of
 		//  the character to the checksum
 		checksum += buf[i];
@@ -92,7 +92,7 @@ export class PMSA003I{
 
 		// check checksum
 		let checksum = buf.subarray(30,32).readUInt16BE(0);
-		let check = sum(buf.subarray(0,30))
+		let check = sum(buf.subarray(0,30));
 		if(check !== checksum)	throw new Error('Invalid PM2.5 checksum');
 
 		let aqiReading = {
